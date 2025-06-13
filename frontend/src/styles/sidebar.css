@@ -1,0 +1,10 @@
+.sidebar-nav-item.depth-1 {
+  margin-left: 16px;
+}
+.sidebar-nav-item.depth-2 {
+  margin-left: 32px;
+}
+.sidebar-nav-item.depth-3 {
+  margin-left: 48px;
+}
+/* Add more as needed for deeper nesting */

@@ -1,0 +1,78 @@
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Theme root classes */
+html.dark, body.dark {
+  background: #18181b;
+  color: #fff;
+}
+html.light, body.light {
+  background: #f8f9fa;
+  color: #18181b;
+}
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar-fixed {
+  width: 224px; /* 56 * 4px = 224px */
+  min-width: 224px;
+  max-width: 224px;
+  background: var(--bs-tertiary-bg);
+  color: var(--bs-body-color);
+  height: 100vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-fixed * {
+  color: var(--bs-body-color) !important;
+}
+
+.main-scrollable {
+  flex: 1 1 0%;
+  height: 100vh;
+  overflow-y: auto;
+  background: var(--bs-body-bg);
+  color: var(--bs-body-color);
+}
+body.light .main-scrollable, html.light .main-scrollable {
+  background: var(--bs-body-bg);
+  color: var(--bs-body-color);
+}
+
+.main-scrollable * {
+  color: var(--bs-body-color) !important;
+}
+
+/* Example for cards, buttons, etc. */
+.card, .card * {
+  background: var(--bs-card-bg, var(--bs-body-bg));
+  color: var(--bs-body-color) !important;
+}
+
+.btn, .btn * {
+  color: var(--bs-btn-color, var(--bs-body-color)) !important;
+}
+
+/* Remove hardcoded color from #root */
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
